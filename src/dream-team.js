@@ -1,6 +1,9 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function createDreamTeam(array) {
+  
+  
+  array = array.filter(item => typeof item === "string");
 
   let checkArray;
   if (checkArray = Array.isArray(array)) {
