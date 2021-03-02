@@ -3,7 +3,7 @@ const CustomError = require("../extensions/custom-error");
 module.exports = function createDreamTeam(array) {
   
   
-  array = array.filter(item => typeof item === "string");
+ 
 
   let checkArray;
   if (checkArray = Array.isArray(array)) {
@@ -16,7 +16,7 @@ module.exports = function createDreamTeam(array) {
     return null;
   }
 
-
+ array = array.filter(item => typeof item === "string");
 
   const result = array.reduce((accumulator, currentValue) => {
     const item = currentValue.trim()
