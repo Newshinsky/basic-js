@@ -2,6 +2,7 @@ const CustomError = require("../extensions/custom-error");
 
 const chainMaker = {
 
+
 	chain: [],
 
   getLength() {
@@ -26,7 +27,7 @@ const chainMaker = {
  this.chain.splice(position-1, 1);
  
  } else {
- 
+ this.chain = []; 
  throw Error ('Error');
  
  }
@@ -40,6 +41,7 @@ const chainMaker = {
   },
   finishChain() {
     let result = this.chain.join("~~");
+    this.chain = []; 
     return result;
   }
 };
